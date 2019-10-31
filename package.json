@@ -1,0 +1,49 @@
+{
+  "name": "tslint-blank-lines-after-imports",
+  "version": "0.1.0",
+  "main": "dist/lankLinesAfterImportsRule.js",
+  "scripts": {
+    "typecheck": "tsc --pretty --noEmit",
+    "lint": "tslint --fix --format codeFrame ./src/**/*.ts",
+    "test": "tslint --test ./test/**/*",
+    "check-all": "yarn typecheck && yarn lint && yarn test",
+    "build": "yarn clean && tsc --build",
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "yarn check-all && yarn build"
+  },
+  "devDependencies": {
+    "husky": "^3.0.9",
+    "rimraf": "^3.0.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.4.3"
+  },
+  "keywords": [
+    "tslint",
+    "rule",
+    "imports",
+    "blank line",
+    "imports blank line",
+    "check imports",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "Valery Bugakov <skymk1@gmail.com> (https://github.com/valerybugakov/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valerybugakov/tslint-blank-lines-after-imports.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn check-all"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}

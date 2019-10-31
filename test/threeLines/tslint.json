@@ -1,0 +1,9 @@
+{
+  "rulesDirectory": "../../dist",
+  "rules": {
+    "blank-lines-after-imports": [
+      true,
+      2
+    ]
+  }
+}
