@@ -1,7 +1,5 @@
 # TSLint Blank Lines After Imports Rule
 
-> Custom rule for tslint
-
 Ensure number of blank lines after all import statements.
 
 ## Usage
@@ -18,7 +16,7 @@ npm i -D tslint-origin-ordered-imports-rule
 }
 ```
 
-_Wrong:_
+Wrong:
 
 ```ts
 import MyClass from './my-class';
@@ -26,12 +24,12 @@ import * as _ from 'lodash';
 class YourClass {}
 ```
 
-_Right:_
+Right:
 
 ```ts
 import MyClass from './my-class';
 import * as _ from 'lodash';
-
+...
 class YourClass {}
 ```
 
@@ -43,7 +41,7 @@ Additional parameter allows to configure number of required blank lines:
 }
 ```
 
-_Wrong:_
+Wrong:
 
 ```ts
 import MyClass from './my-class';
@@ -51,12 +49,13 @@ import * as _ from 'lodash';
 class YourClass {}
 ```
 
-_Right:_
+Right:
 
 ```ts
 import MyClass from './my-class';
 import * as _ from 'lodash';
-
+...
+...
 class YourClass {}
 ```
 
